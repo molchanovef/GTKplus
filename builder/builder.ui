@@ -9,7 +9,8 @@
         <child>
           <object id="button1" class="GtkButton">
             <property name="visible">True</property>
-            <property name="label">Button 1</property>
+			<property name="label" translatable="yes">Bu_tton 1</property>
+			<property name="use_underline">True</property>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -19,7 +20,8 @@
         <child>
           <object id="button2" class="GtkButton">
             <property name="visible">True</property>
-            <property name="label">Button 2</property>
+            <property name="label" translatable="yes">Butt_on 2</property>
+			<property name="use_underline">True</property>
           </object>
           <packing>
             <property name="left-attach">1</property>
@@ -27,9 +29,10 @@
           </packing>
         </child>
         <child>
-          <object id="quit" class="GtkButton">
+          <object id="exit" class="GtkButton">
             <property name="visible">True</property>
-            <property name="label">Quit</property>
+            <property name="label" translatable="yes">E_xit</property>
+			<property name="use_underline">True</property>
           </object>
           <packing>
             <property name="left-attach">0</property>

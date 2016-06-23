@@ -4,7 +4,8 @@ static void
 print_hello (GtkWidget *widget,
              gpointer   data)
 {
-  g_print ("Hello World\n");
+  char *str = (char*)data;
+  g_print ("Builder App: %s\n",str);
 }
 
 int
@@ -26,12 +27,12 @@ main (int   argc,
   g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
 
   button = gtk_builder_get_object (builder, "button1");
-  g_signal_connect (button, "clicked", G_CALLBACK (print_hello), NULL);
+  g_signal_connect (button, "clicked", G_CALLBACK (print_hello), "Button 1 pressed");
 
   button = gtk_builder_get_object (builder, "button2");
-  g_signal_connect (button, "clicked", G_CALLBACK (print_hello), NULL);
+  g_signal_connect (button, "clicked", G_CALLBACK (print_hello), "Button 2 pressed");
 
-  button = gtk_builder_get_object (builder, "quit");
+  button = gtk_builder_get_object (builder, "exit");
   g_signal_connect (button, "clicked", G_CALLBACK (gtk_main_quit), NULL);
 
   gtk_main ();
